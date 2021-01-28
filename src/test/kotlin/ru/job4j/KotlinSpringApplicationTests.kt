@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.web.context.WebApplicationContext
 import org.springframework.beans.factory.annotation.Autowired
-//import org.springframework.security.test.context.support.WithMockUser
+import org.springframework.security.test.context.support.WithMockUser
 import org.springframework.test.web.servlet.setup.MockMvcBuilders.*
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
@@ -29,7 +29,7 @@ class KotlinSpringApplicationTests {
     }
 
     @Test
-//    @WithMockUser
+    @WithMockUser
     fun `1 - Get empty list of product`() {
         val request = get(url)
                 .contentType(contentType)
@@ -39,7 +39,7 @@ class KotlinSpringApplicationTests {
     }
 
     @Test
-//    @WithMockUser
+    @WithMockUser
     fun `2 - Add product`() {
         val json = """
 			{
@@ -63,7 +63,7 @@ class KotlinSpringApplicationTests {
     }
 
     @Test
-//    @WithMockUser
+    @WithMockUser
     fun `3 - Update product`() {
         val json = """
 			{
@@ -87,7 +87,7 @@ class KotlinSpringApplicationTests {
     }
 
     @Test
-//    @WithMockUser
+    @WithMockUser
     fun `4 - Get first product`() {
         val json = """
 			{
@@ -105,7 +105,7 @@ class KotlinSpringApplicationTests {
     }
 
     @Test
-//    @WithMockUser
+    @WithMockUser
     fun `5 - Get list with one product`() {
         val json = """[
 			{
@@ -124,7 +124,7 @@ class KotlinSpringApplicationTests {
     }
 
     @Test
-//    @WithMockUser
+    @WithMockUser
     fun `6 - Delete one product and get empty list`() {
         val request = delete(url + "1")
                 .contentType(contentType)

@@ -8,6 +8,7 @@ import ru.job4j.service.ServiceProduct
 @RestController
 @RequestMapping("products")
 class ProductController(private val service: ServiceProduct) {
+
     @GetMapping("/")
     fun getAllProducts() = service.All()
 
