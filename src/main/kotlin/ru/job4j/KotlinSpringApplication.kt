@@ -30,14 +30,10 @@ class KotlinSecurityConfiguration : WebSecurityConfigurerAdapter() {
 
 fun main(args: Array<String>) {
     runApplication<KotlinSpringApplication>(*args) {
-
-
         addInitializers(beans {
             bean {
-
                 fun user(user: String, pw: String, vararg roles: String) =
                         User.withDefaultPasswordEncoder().username(user).password(pw).roles(*roles).build()
-
                 InMemoryUserDetailsManager(
                         user("user", "user", "USER"),
                         user("admin", "admin", "USER", "ADMIN"))

@@ -1,12 +1,15 @@
-_"# kotlin-spring" 
+**Проект Kotlin-spring**
 
-**This project present the restFull service by products.
+_Представляет собой RestFull сервис по обращению с каким-либо продуктом._
 
-development language - kotlin
+В данном проекте реализовано:
 
-DB - PostgreSQL
+- Проект написан на языке _Kotlin_;
 
-Spring 5
+- хранилище объектов предсталяет собой БД _Postgre_;
 
-Authenticate - Spring security_**
+- для построения проекта испоьзовался _Spring boot2_;
+
+- реализована аутентификация через _Spring security_.
+
 
